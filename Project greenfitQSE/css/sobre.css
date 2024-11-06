@@ -1,0 +1,190 @@
+/*zera o css padrao*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+  /*fundo tela*/
+  
+html{
+    width: 100vw;
+    height: 100vh;
+    font-size: 62.5%;
+    color: white;
+    font-family: "Lato", system-ui;
+    font-weight: 400;
+    font-style: italic;
+}
+  
+  
+body{
+    background: linear-gradient(rgb(17, 17, 17, 0.5), rgba(20, 20, 20, 1)), url(../img/2.jfif);
+    background-position: center center;
+    background-size: 100% 100%;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+}
+  
+  /*menu - header - barra de navegacao*/
+  
+header{
+    width: 100%;
+    height: 10hv;
+    background: rgba(22, 22, 22, 0.2) ;
+}
+  
+.menu-content{
+    text-transform: uppercase ;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+}
+  
+.logo{
+    font-size: 18rem;
+    letter-spacing: 0.4rem;
+    cursor: pointer;
+}
+  
+.menu-content .list-itens{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+  
+.menu-content .list-itens a {
+    text-decoration: none;
+    color: white;
+    padding: 1.5rem;
+    transform: 2ms ease-in;
+    position: relative;
+}
+  
+.menu-content .list-itens a:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0px;
+    height: 1px;
+    background-color: aqua;
+    transition: all 2s ease;
+}
+  
+.menu-content .list-itens a:hover::before{
+    width: 100%;
+}
+  
+  /*centro - principal*/
+  
+main{
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.main-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+  
+  /*textos conteudo principal*/
+  
+.text-1{
+    height: 200px;
+    width: 650px;
+    font-size: 20px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+  
+.text-2{
+    margin-bottom: 7rem;
+    font-size: 2rem;
+    color: rgb(165, 165, 165);
+    text-transform: uppercase;
+    margin: 4rem 0;
+}
+
+#logo-aca{
+    height: 6vh;
+    width: 100px;
+}
+
+
+/*arrumar em aula*/
+.carousel {
+    box-shadow: 2px 2px 2px rgba(8, 8, 8, 0.568);
+    overflow: hidden;
+    height: 400px;
+    width: 100%;
+    max-width: 800px; /* Mantenha essa largura máxima */
+}
+
+.container {
+    display: flex;
+    transition: transform 1.5s ease-in-out;
+    width: calc(100% * 5); /* Supondo que você tenha 6 imagens */
+}
+
+img {
+    object-fit: 800px; /* Isso garante que a imagem preencha o espaço */
+    height: 400px; /* Mantenha a altura constante */
+    width: 400px; /* Defina a largura como 100% para preencher o contêiner */
+}
+
+
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+    .text-1 {
+        font-size: 1.5rem; /* Ajuste o tamanho da fonte */
+        width: 90%; /* Ajuste a largura */
+    }
+
+    .text-2 {
+        font-size: 1rem; /* Ajuste o tamanho da fonte */
+    }
+
+    .carousel {
+        height: 300px; /* Ajuste a altura do carrossel */
+    }
+
+    .container {
+        width: calc(100% * 5); /* Ajuste para 3 imagens visíveis */
+    }
+
+    img {
+        object-fit: cover; /* Ajuste para cobrir o espaço */
+        height: auto; /* Mantenha a altura automática */
+        width: 100%; /* Mantenha a largura em 100% */
+    }
+    
+}
+
+/* Para telas menores que 480px */
+@media (max-width: 480px) {
+    .text-1 {
+        font-size: 1.2rem; /* Reduza ainda mais o tamanho da fonte */
+    }
+
+    .carousel {
+        height: 200px; /* Ajuste a altura do carrossel */
+    }
+
+    .container {
+        width: calc(100% * 5);
+    }
+
+    img {
+        object-fit: cover; /* Ajuste para cobrir o espaço */
+        height: auto; /* Mantenha a altura automática */
+        width: 100%; /* Mantenha a largura em 100% */
+    }
+    
+}

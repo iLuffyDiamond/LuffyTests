@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenFit</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+
+  <div class="overlay"></div> 
+
+  <div id="form-container">
+    <form id="login-form">
+      <h1>Login</h1>
+      <div class="btns">
+        <input type="text" placeholder="Login" id="userName" required>
+        <div style="position: relative;">
+            <input type="password" placeholder="Senha" id="password" required>
+            <span class="olho-icon" onclick="verSenha('password', this)">🙈</span>
+        </div>
+      </div>
+      <div class="entrar">
+        <input type="submit" value="Entrar">
+      </div> 
+      <label>Ainda não tem uma conta? <a href="#" onclick="showRegister()">criar conta</a></label>
+    </form>
+
+    <form id="register-form" style="display:none;">
+      <h1>Cadastrar-se</h1>
+      <div class="btns">
+        <input type="text" placeholder="Nome completo" id="fullName" required>
+        <div style="position: relative;">
+            <input type="password" placeholder="Senha" id="register-password" required>
+            <span class="olho-icon" onclick="verSenha('register-password', this)">🙈</span>
+        </div>
+        <div style="position: relative;">
+            <input type="password" placeholder="Confirme a senha" id="confirm-password" required>
+            <span class="olho-icon" onclick="verSenha('confirm-password', this)">🙈</span>
+        </div>
+      </div>
+      <div class="entrar">
+        <input onclick="submitSen()" type="submit" value="Cadastrar">
+      </div> 
+      <label>Já tem uma conta? <a href="#" onclick="showLogin()">fazer login</a></label>
+    </form>
+  </div>
+
+  <script src="../js/login.js"></script>
+</body>
+</html>

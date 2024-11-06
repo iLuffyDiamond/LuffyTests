@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+
+/*zera o css padrao*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*fundo tela*/
+
+html{
+    width: 100vw;
+    height: 100vh;
+    font-size: 62.5%;
+    color: white;
+    font-family: "Lato", system-ui;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+body{
+    background: linear-gradient(rgb(17, 17, 17, 0.5), rgba(20, 20, 20, 1)), url(../img/2.jfif);
+    background-position: center center;
+    background-size: 100% 100%;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+    
+}
+
+/*menu - header - barra de navegacao*/
+
+header{
+    width: 100%;
+    height: 10hv;
+    background: rgba(22, 22, 22, 0.2) ;
+}
+
+.menu-content{
+    text-transform: uppercase ;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+}
+
+.logo{
+    font-size: 18rem;
+    letter-spacing: 0.4rem;
+    cursor: pointer;
+}
+
+.menu-content .list-itens{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.menu-content .list-itens a {
+    text-decoration: none;
+    color: white;
+    padding: 1.5rem;
+    transform: 2ms ease-in;
+    position: relative;
+}
+
+.menu-content .list-itens a:before{
+   content: '';
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   width: 0px;
+   height: 1px;
+   background-color: aqua;
+   transition: all 2s ease;
+}
+
+.menu-content .list-itens a:hover::before{
+   width: 100%;
+}
+
+/*centro - principal*/
+
+main{
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*textos conteudo principal*/
+
+.text-1{
+    width: 850px;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.text-2{
+    margin-bottom: 7rem;
+    font-size: 2rem;
+    color: rgb(165, 165, 165);
+    text-transform: uppercase;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btns button{
+    width: 250px;
+    height: 60px;
+    cursor: pointer;
+    border: 1px white solid;
+    color: white;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    border-radius: 20px;
+    position: relative;
+    transition: 1.5s;
+}
+
+.btns button:hover{
+    color: rgb(251, 255, 0);
+}
+
+.btns button:before{
+    content: ' ';
+    border-radius: 20px;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 60px;
+    background-color: rgb(61, 61, 61);
+    z-index: -1;
+    transition: 1.5s;
+}
+
+.btns button:hover:before{
+    width: 100%;
+}
+
+img{
+    height: 6vh;
+    width: 100px;
+}
+
+/*responsivos*/
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+    .text-1 {
+        font-size: 3rem; 
+        width: 90%; 
+    }
+
+    .text-2 {
+        font-size: 1.5rem; 
+    }
+
+    .btns button {
+        width: 200px; 
+        height: 50px; 
+    }
+
+    img {
+        width: 80px; 
+    }
+}
+
+/* Para telas menores que 480px */
+@media (max-width: 480px) {
+    .text-1 {
+        font-size: 2rem; 
+    }
+
+    .menu-content {
+        flex-direction: column; 
+    }
+
+    .menu-content .list-itens {
+        flex-direction: column; 
+        gap: 10px; 
+    }
+}

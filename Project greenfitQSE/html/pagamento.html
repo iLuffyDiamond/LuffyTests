@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento Academia</title>      
+    <link rel="stylesheet" href="../css/pagamento.css">
+</head>
+<body>
+    <div class="pay-container" id="planos-container">
+        <!-- Planos da Academia -->
+        <article class="card-box">
+            <h1>Plano Básico</h1>
+            <p>Benefícios:</p>
+            <ul>
+                <li>Acesso ilimitado às instalações da academia.</li>
+                <li>Uso de equipamentos de musculação e cardio.</li>
+                <li>Avaliação física inicial.</li>
+            </ul>
+            <button onclick="selectPlan('R$50')">R$50</button>
+        </article>
+        <article class="card-box">
+            <h1>Plano Médio</h1>
+            <p>Benefícios:</p>
+            <ul>
+                <li>Todos os benefícios do Plano Básico.</li>
+                <li>2 sessões de personal training por mês.</li>
+                <li>Acesso a workshops mensais sobre nutrição e fitness.</li>
+                <li>Programa de acompanhamento nutricional.</li>
+            </ul>
+            <button onclick="selectPlan('R$250')">R$250</button>
+        </article>
+        <article class="card-box">
+            <h1>Plano Ultra</h1>
+            <p>Benefícios:</p>
+            <ul>
+                <li>Todos os benefícios do Plano Médio.</li>
+                <li>Acesso a todas as áreas da academia, incluindo áreas VIP.</li>
+                <li>8 sessões de personal training por mês.</li>
+                <li>Acompanhamento contínuo com um coach pessoal.</li>
+                <li>Acesso a viagens e retiros de fitness organizados pela academia.</li>
+            </ul>
+            <button onclick="selectPlan('R$500')">R$500</button>
+        </article>
+    </div>
+
+    <div id="payment-section" style="display:none;">
+        <h2>Escolha seu método de pagamento</h2>
+        <form id="payment-form">
+            <!-- Métodos de pagamento -->
+            <label>
+                <input type="radio" name="payment-method" value="cartao" checked>
+                Cartão de Crédito
+            </label>
+            
+            <div id="cartao-info" class="payment-info">
+                <input id="nome-titular" type="text" placeholder="Nome do titular do Cartão" required>
+                <input id="card-number" type="text" placeholder="Número do Cartão" required>
+                <input id="card-validade" type="text" placeholder="Data de Validade (MM/AA)" required>
+                <input id="cvv-number" type="text" placeholder="CVV" required>
+            </div>
+
+            <label>
+                <input type="radio" name="payment-method" value="pix">
+                Pix
+            </label>
+            <div id="pix-info" class="payment-info" style="display: none;">
+                <input id="nome" type="text" placeholder="Nome Completo">
+                <input id="CPF" type="text" placeholder="CPF">
+                <input id="emai" type="email" placeholder="E-mail">
+                <button id="QrCode" class="QrCode" onclick="GerarQrcode()">Gerar QrCode</button>
+                <img src="../img/qrcode.png" class="imgqr" id="imgqrcode" style="display: none">
+            </div>
+
+            <div id="payment-summary" style="margin-top: 20px;">
+                <h3>Preço do Plano:</h3>
+                <div id="selected-price" style="font-size: 1.5rem; font-weight: bold;">R$0</div>
+                <button type="submit" id="Pagar">Pagar</button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="../js/pagamento.js"></script>
+</body>
+</html>

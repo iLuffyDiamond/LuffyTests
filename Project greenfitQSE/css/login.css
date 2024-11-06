@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+
+/* Tira o CSS padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  html{
+    width: 100vw;
+    height: 100vh;
+    font-size: 62.5%;
+    color: white;
+    font-family: "Lato", system-ui;
+    font-weight: 400;
+    font-style: italic;
+}
+}
+
+body {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  height: 100vh; 
+  position: relative; 
+  background: linear-gradient(rgb(17, 17, 17, 0.5), rgba(20, 20, 20, 1)), url(../img/2.jfif);
+  background-position: center center;
+  background-size: cover; 
+  background-repeat: no-repeat;
+}
+
+/*parte cinza atrás do login*/
+.overlay {
+  position: absolute; 
+  width: 70%; /*isso faz ficar responsivo*/
+  height: 50%; /*isso faz ficar responsivo*/
+  background-color: rgba(20, 20, 20, 0.2); 
+  z-index: 1; /* Para garantir que fique atrás da tela de login */
+}
+
+form {
+  color: white;
+  position: relative; 
+  width: 100%; 
+  max-width: 400px; 
+  text-align: center;
+  z-index: 1; /*faz ficar por cima da tela cinza*/ 
+  font-family: "Lato", system-ui;
+  font-weight: 400;
+  font-style: italic;
+}
+
+input {
+  display: block;
+  margin: 10px auto;
+  width: 100%; 
+  height: 40px;
+  border-radius: 5rem;
+  padding: 10px;
+  font-size: 16px;
+  border-color: black;
+  transition: all 0.5s ease;
+  font-family: "Lato", system-ui;
+  font-weight: 400;
+  font-style: italic;
+}
+
+input[type="text"],
+input[type="password"]{
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgb(255, 255, 255);
+}
+
+.entrar{
+  margin: 20px 0;
+  font-family: "Lato", system-ui;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.entrar input[type="submit"]{
+  background-color: rgba(104, 103, 103, 0.6);
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.3 ease;
+}
+
+.entrar input[type="submit"]:hover{
+  background-color: rgba(104, 103, 103, 0.9);
+}
+
+.olho-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 10px; 
+  top: 50%; 
+  transform: translateY(-50%); 
+}
+.input-container {
+  position: relative;
+  margin-bottom: 15px; 
+}
+
+/*responsivos*/
+
+@media (max-width: 600px) {
+  form {
+    max-width: 90%; /* Aumenta a largura do formulário em telas menores */
+  }
+
+  input {
+    height: 35px; /* Ajusta a altura dos inputs */
+    font-size: 14px; /* Ajusta o tamanho da fonte */
+  }
+
+  .entrar input[type="submit"] {
+    font-size: 14px; /* Ajusta o tamanho do botão */
+  }
+}
+
+@media (max-width: 400px) {
+  input {
+    height: 30px; /* Ajusta ainda mais a altura dos inputs */
+    font-size: 12px; /* Ajusta o tamanho da fonte */
+  }
+
+  .entrar input[type="submit"] {
+    font-size: 12px; /* Ajusta o tamanho do botão */
+  }
+}

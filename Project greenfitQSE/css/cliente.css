@@ -1,0 +1,188 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.menu button {
+    padding: 12px 20px; /* Aumenta o padding */
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Transição suave */
+    font-size: 16px; /* Aumenta o tamanho da fonte */
+}
+
+.menu button:hover {
+    background-color: #0069d9; /* Um tom mais claro de azul */
+    transform: scale(1.05); /* Aumenta um pouco o botão ao passar o mouse */
+}
+
+.menu button:focus {
+    outline: none; /* Remove o contorno padrão */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adiciona um efeito de sombra */
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #007bff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile h2 {
+    margin: 10px 0;
+    color: #343a40;
+}
+
+.schedule h3 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+select {
+    background: #f8f9fa;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #007bff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+li:hover {
+    background: #e2e6ea;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu button {
+        width: 100%; /* Botões ocupam a largura total */
+        margin-bottom: 10px; /* Espaçamento entre os botões */
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Responsivo */
+@media (max-width: 400px) {
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .menu button {
+        padding: 8px 10px;
+    }
+
+    .schedule h3 {
+        font-size: 1.2rem;
+    }
+}
+
+#picture__input {
+    display: none;
+}
+
+.picture__img {
+    border-radius: 100px;
+    width: 130px;
+    height: 130px;
+}
+
+.picture {
+    margin: auto;
+    width: 130px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    border: 2px dashed currentcolor;
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out;
+    outline: none;
+    overflow: hidden;
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+
+.picture:hover {
+    color: #777;
+    background: #ccc;
+}
+
+.picture:active {
+    border-color: turquoise;
+    color: turquoise;
+    background: #eee;
+}
+
+.picture:focus {
+    color: #777;
+    background: #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}

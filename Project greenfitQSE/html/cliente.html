@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
+    <link rel="stylesheet" href="../css/cliente.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <button onclick="showSection('dados')">Dados do Usuário</button>
+            <button onclick="showSection('treinos')">Treinos</button>
+        </div>
+
+        <div id="dados" class="section">
+            <div class="profile">
+                
+
+                <label class="picture" for="picture__input" tabIndex="0">
+                    <span class="picture__image"></span>
+                  </label>
+                  
+                  <input type="file" name="picture__input" id="picture__input">
+
+
+
+                
+                <div id="selecName">
+                    <b id="nameUser">Nome do usuario</b>
+                    <script>
+                        const valor = localStorage.getItem('nome-titular'); // Recupera o valor do localStorage
+                        document.getElementById('nameUser').innerText = valor ? valor : 'Nenhum valor encontrado.';
+                    </script>
+                </div>
+
+                <p><strong>Senha do Usuário para entrar no Site:</strong><span id="stringCapturada"></span></p>
+
+                <script>
+                    const stringCapturada = localStorage.getItem('minhaString'); // Recupera a string do localStorage
+                    document.getElementById('stringCapturada').innerText = stringCapturada ? stringCapturada : 'Nenhuma string encontrada.';
+                </script>
+                
+                <div id="cartao-container" style="display: none;">
+                    <button id="edit-button" onclick="toggleEdit()">Editar</button>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div id="treinos" class="section" style="display: none;">
+            <h3>Treinos do Mês</h3>
+            <ul id="workout-schedule">
+                <p>Segunda</p><select>
+                    <Option>Esteira</Option>
+                    <option>Leg press</option>
+                    <option>Supino reto</option>
+                    <option>Remada Máquina</option>
+                    <option>Tríceps Máquina</option>
+                    <option>Abdominal no Solo</option>
+                    <option>Rosca direta Barra</option>
+                    <option>Nada</option>
+                </select>
+                <p>Terça-Feira</p><select>
+                    <option>Leg press</option>
+                    <Option>Esteira</Option>
+                    <option>Supino reto</option>
+                    <option>Remada Máquina</option>
+                    <option>Tríceps Máquina</option>
+                    <option>Abdominal no Solo</option>
+                    <option>Rosca direta Barra</option>
+                    <option>Nada</option>
+                </select>
+                <p>Quarta-Feira</p><select>
+                    <option>Supino reto</option>
+                    <Option>Esteira</Option>
+                    <option>Leg press</option>
+                    <option>Remada Máquina</option>
+                    <option>Tríceps Máquina</option>
+                    <option>Abdominal no Solo</option>
+                    <option>Rosca direta Barra</option>
+                    <option>Nada</option>
+                </select>
+                <p>Quinta-Feira</p><select>
+                    <option>Remada Máquina</option>
+                    <Option>Esteira</Option>
+                    <option>Leg press</option>
+                    <option>Supino reto</option>
+                    <option>Tríceps Máquina</option>
+                    <option>Abdominal no Solo</option>
+                    <option>Rosca direta Barra</option>
+                    <option>Nada</option>
+                </select>
+                <p>Sexta-Feira</p><select>
+                    <option>Tríceps Máquina</option>
+                    <Option>Esteira</Option>
+                    <option>Leg press</option>
+                    <option>Supino reto</option>
+                    <option>Remada Máquina</option>
+                    <option>Abdominal no Solo</option>
+                    <option>Rosca direta Barra</option>
+                    <option>Nada</option>
+                </select>
+                <p>Sabado</p><select>
+                    <option>Abdominal no Solo</option>
+                    <Option>Esteira</Option>
+                    <option>Leg press</option>
+                    <option>Supino reto</option>
+                    <option>Remada Máquina</option>
+                    <option>Tríceps Máquina</option>
+                    <option>Rosca direta Barra</option>
+                    <option>Nada</option>
+                </select>
+                <p>Domingo</p><select>
+                    <option>Rosca direta Barra</option>
+                    <Option>Esteira</Option>
+                    <option>Leg press</option>
+                    <option>Supino reto</option>
+                    <option>Remada Máquina</option>
+                    <option>Tríceps Máquina</option>
+                    <option>Abdominal no Solo</option>
+                    <option>Nada</option>
+                </select>
+            </ul>
+        </div>
+    </div>
+    <script src="../js/cliente.js"></script>
+    <script src="../js/pagamento.js" defer></script>
+    <script src="../js/login.js"></script>
+</body>
+</html>

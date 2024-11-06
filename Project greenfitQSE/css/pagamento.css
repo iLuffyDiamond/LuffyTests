@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e9ecef;
+    display: flex; 
+    justify-content: center;
+    align-items: center;/*alinha o item no meio da tela verticalmente*/
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+}
+
+.pay-container{
+    display: flex;
+    align-items: center;/*faz os card de pagamenento ficarem centralizados na vertical*/
+    justify-content: center;/*faz os cards de pagamento ficar centralizado na horizontal*/
+    background-color: white;
+    gap: 2%;/*faz o espaçamento dos cards*/
+
+    /*tamanho do container de pagamento*/
+    width: 80%;
+    height: 70vh;
+    box-shadow:0 4px 20px rgba(20, 20, 20, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.card-box{
+    background-color: #007bff;
+    color:black;
+    text-align: left;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 6 rgba(1, 1, 1, 1);
+}
+
+.card-box:hover{
+    transform: scale(1.05);
+}
+
+
+h1{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+p{
+    margin-bottom: 20px;
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(211, 211, 211);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button :hover{
+    background-color: #218838;
+}
+
+
+
+/*parte do pagamento*/
+
+#payment-section {
+    background-color: #ffffff; /* Cor de fundo branca */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin-top: 20px; /* Espaçamento acima da seção */
+}
+
+.payment-info {
+    margin-top: 15px; /* Espaçamento acima dos campos de pagamento */
+}
+
+input[type="text"] {
+    width: 100%; /* Largura total */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin-bottom: 15px; /* Espaçamento abaixo de cada campo */
+}
+
+input[type="radio"] {
+    margin-right: 10px; /* Espaçamento à direita do botão de opção */
+}
+
+button[type="submit"] {
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+}
+.QrCode{
+    margin-left: 200px;
+    width: 200px;
+}
+.imgqr{
+    margin: auto;
+}
+#payment-summary {
+    background-color: #f8f9fa; 
+    padding: 15px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+email{
+    width: 100px;
+    height: 50px;
+}
